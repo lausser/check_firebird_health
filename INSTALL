@@ -54,6 +54,8 @@ The simplest way to compile this package is:
 
   4. Type `make install' to install the programs and any data files and
      documentation.
+     You can also copy plugins-scripts/check_firebird_health to wherever
+     you want. This is much simpler.
 
   5. You can remove the program binaries and object files from the
      source code directory by typing `make clean'.  To also remove the
