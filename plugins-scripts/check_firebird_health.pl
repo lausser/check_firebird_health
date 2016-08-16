@@ -49,10 +49,16 @@ $plugin->add_arg(
 );
 $plugin->add_arg(
     spec => 'port=i',
-    default => 1433,
+    default => 3051,
     help => "--port
    the database server's port",
     required => 0,
+);
+$plugin->add_arg(
+    spec => 'database=s',
+    help => "--database
+   the name of the database to connect to",
+    required => 1,
 );
 
 $plugin->getopts();

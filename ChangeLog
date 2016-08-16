@@ -1,3 +1,9 @@
+* 2016-08-16 1.5.1.3
+  syntax error
+* 2016-08-16 1.5.1.2
+  check for a --database parameter
+* 2016-08-12 1.5.1.1
+  update GLPlugin/Extraopts
 * 2016-07-06 1.5.1
   cleanup args, github upload
 * 2016-02-29 1.5

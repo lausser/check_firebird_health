@@ -8,8 +8,8 @@ sub classify {
   if ($self->opts->method eq "dbi") {
     bless $self, "Classes::FIREBIRD::DBI";
     if ((! $self->opts->hostname && ! $self->opts->server) ||
-        ! $self->opts->username || ! $self->opts->password) {
-      $self->add_unknown('Please specify hostname or server, username and password');
+        ! $self->opts->username || ! $self->opts->password || ! $self->opts->database) {
+      $self->add_unknown('Please specify hostname or server, database, username and password');
     }
     if (! eval "require DBD::Firebird") {
       $self->add_critical('could not load perl module DBD::Firebird');
