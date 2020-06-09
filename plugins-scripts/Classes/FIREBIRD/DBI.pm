@@ -61,7 +61,10 @@ sub check_connect_and_version {
     my $version;
     eval {
       $version = $self->fetchrow_array(q{
-          SELECT rdb$get_context('SYSTEM', 'ENGINE_VERSION');
+          SELECT
+              rdb$get_context('SYSTEM', 'ENGINE_VERSION')
+          FROM
+              rdb$database
       });
     };
     if (! $version) {
